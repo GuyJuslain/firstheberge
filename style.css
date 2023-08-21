@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box; /*Pour eviter à ce qu'aucun element enfant ne deborde son parent*/
+}
+
+.bg-transparent{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+html, body{
+    /*   background-color: gainsboro;  */
+       font-family: Avenir, sans-serif;
+       min-height: 100vh; 
+       display: flex;
+       flex-direction: column; /* range les elements du body en colonne. ie les uns en dessous des autres*/
+  
+   }
+
+   nav{
+    background: pink;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: -450px;    /* Pour gacher la barre de navigation en haut du site. Elle n'est pas visible*/
+    transition: top 1s ease;
+}
+
+   .container-background {
+    background-image: url('./assets/lac_baleng.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Facultatif - pour figer l'image d'arrière-plan */
+    height: 350px;
+}
+/* La pseudo class hover pour permettre aux line de changer de couleur en cas de survol de la souris*/ 
+
+nav li a:hover {
+    color: red;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.corps{ 
+    flex: 1;    /*Pour permettre au cors d'occuper tout l'espace possible et confiner le footer en bas de page*/ 
+}
+
+.footer{
+    color: whitesmoke;
+    background-color: darkslategray;
+}
+
+a img{
+    margin: 10px 0;
+    height: 35px;
+    width: 35px;
+}
+
+ul > li {
+    list-style: none;
+}
